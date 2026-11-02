@@ -60,3 +60,18 @@ These are alternative interfaces, not gateway repairs. A slow or waiting dashboa
 - Change made:
 - Verification:
 - Remaining uncertainty:
+
+## If Hermes freezes inside Command Prompt
+
+The user reports that long freezes persist even when Hermes is used through CMD. The CLI shortcut and `hermes dashboard` are alternative access routes, not fixes for the freeze.
+
+Before changing the installation:
+
+1. Record the exact command, profile, timestamp and visible behaviour (static prompt, spinner, no response to typing, or Windows "Not Responding").
+2. If possible, leave the frozen process in place and open a **separate** Command Prompt window.
+3. Run `hermes gateway status` in the separate window. This helps distinguish a CLI-only hang from a shared gateway problem.
+4. In Task Manager, note CPU and memory for the Hermes/Python processes and whether Windows marks a process as Not Responding.
+5. Capture the exact CMD output and matching Hermes log entries. Redact credentials, tokens and private values before sharing.
+6. Compare timestamps to see whether the CLI is waiting on a provider/model response, a tool/plugin, gateway communication, or session/database activity.
+
+Treat these as investigation branches, not assumed causes. Do not reinstall, delete session data, disable more plugins, change providers, or restart the shared gateway speculatively. Capture evidence first and make one controlled change only when the evidence supports it.
