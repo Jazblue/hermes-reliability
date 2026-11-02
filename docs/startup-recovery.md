@@ -1,5 +1,27 @@
 # Windows startup and safe recovery
 
+## Alternative access routes (Windows)
+
+If the normal desktop shortcut is unavailable or the browser dashboard is slow to open, the user has confirmed these two alternatives:
+
+**Hermes CLI Desktop shortcut Target:**
+
+```cmd
+C:\Windows\System32\cmd.exe /k "hermes chat --cli"
+```
+
+This opens Command Prompt, runs the interactive Hermes CLI chat, and keeps the CMD window open.
+
+**Open the dashboard from Command Prompt:**
+
+```cmd
+hermes dashboard
+```
+
+This starts the Hermes dashboard using the current installation/profile context. Check which profile is selected when multiple profiles are configured. The user's recent launch selected `jhermes`.
+
+These are alternative interfaces, not gateway repairs. A slow or waiting dashboard command does not alone prove the gateway has failed. Allow time for initialisation, record the exact output and launch duration, and check gateway health separately with `hermes gateway status` before changing services or reinstalling.
+
 ## First checks after powering on
 1. Open Command Prompt.
 2. Run `hermes gateway status`.
